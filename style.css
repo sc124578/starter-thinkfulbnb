@@ -1,8 +1,55 @@
 /* -------  General Styles ------- */
 
+
 body {
   font-family: "Lato", sans-serif;
 }
+header h1 {
+color: #fff;
+text-align: center;
+margin: 0;
+padding-top: 20px;
+}
+
+header nav {
+  display: flex;
+  justify-content: center;
+}
+
+header nav ul {
+  display: flex;
+  padding-left: 0px;
+  list-style: none;
+}
+header nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 20 0 0;
+}
+
+header nav ul li:last-child a {
+  margin-right: 0;
+}
+
+@media all and (min-width: 600px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 30;
+  }
+  header h1 {
+    margin: 14px 0;
+    padding-top: 0;
+  }
+  header nav {
+    margin-top: 8px;
+  }
+  header nav ul li a:hover {
+    color: #bdbdbd;
+  }
+  
+}
+
 
 h2 {
   font-size: 26px;
@@ -17,8 +64,12 @@ h3 {
 }
 
 p {
+  display: flex;
   line-height: 1.5em;
   margin: 0;
+  text-align: center;
+  flex-direction: row;
+
 }
 
 section {
@@ -31,14 +82,16 @@ section.alternate-background {
 }
 
 main img {
-  width: 100px;
+  display: flex;
+  flex-direction: row;
+  width: 350px;
 }
 
 /* ---  Groups & Items --- */
 
 .group {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
 }
 
 .item {
@@ -80,10 +133,7 @@ header nav ul li a:hover {
 }
 
 /* -------  Search Form ------- */
-form {
-  border: 2px solid #ff385c;
-  padding: 10px;
-}
+
 
 form label {
   font-weight: bold;
@@ -91,9 +141,13 @@ form label {
 
 form select,
 form input {
+  
   margin-bottom: 20px;
   width: 180px;
+  margin-inline-start: 60px;
+  
 }
+
 
 form button {
   background-color: #ff385c;
@@ -103,6 +157,24 @@ form button {
   padding: 15px;
   width: 100%;
 }
+
+fieldset {
+  display: flex;
+  flex-direction: row;
+  border: 2px solid #ff385c;
+  padding: 10px;
+}
+
+button {
+  margin-left: 135px;
+}
+
+label {
+  display: flex;
+  flex-direction: row;
+  margin-left: 35px;
+}
+
 
 /* -------  Footer ------- */
 
@@ -115,5 +187,6 @@ footer p {
   text-align: center;
   padding: 20px;
 }
+
 
 /* -------  Media Query ------- */
